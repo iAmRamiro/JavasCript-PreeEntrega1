@@ -4,9 +4,16 @@
 // ECOMMERCE 
 
 
+const productos  = ["Auriculares Gamer","Teclado Kumara Red Dragon","Mouse Razer","Monitor 24 pulgdas"]
+
+
 
 
 //Retorna el Numero Del Producto
+
+let seleccion;
+
+
 function Inicio(){
 
     alert("##################################" +
@@ -16,8 +23,13 @@ function Inicio(){
 
 
     alert("**PRODUCTOS**");
-    let UsuarioNumero = parseInt(prompt(" 1-Auriculares Gamer $3800 \n 2-Monitor 20 pulgadas $4500 \n 3-Teclado Gamer $5400  \n 4-Mouse Razer $4800 "));
-    return UsuarioNumero;
+    do{
+
+        seleccion = parseInt(prompt("1- Procesadores \n 2-Placas De video \n 3-Rams \n 4-Gabinetes \n 5-Fuentes \n 6- PC Armadas "))
+
+    }while( isNaN(seleccion) || seleccion < 1 || seleccion >= 6);
+
+    return seleccion;
     
     
 }
